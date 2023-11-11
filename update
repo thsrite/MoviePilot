@@ -27,7 +27,7 @@ install_backend_and_download_resources() {
             download_and_unzip "https://github.com/jxxghp/MoviePilot-Plugins/archive/refs/heads/main.zip" "Plugins"
             if [ $? -eq 0 ]; then
                 echo "插件下载成功"
-                download_and_unzip "https://github.com/jxxghp/MoviePilot-Resources/archive/refs/heads/main.zip" "Resources"
+                download_and_unzip "https://github.com/thsrite/MoviePilot-Resources/archive/refs/heads/main.zip" "Resources"
                 if [ $? -eq 0 ]; then
                     echo "资源包下载成功"
                     frontend_version=$(curl ${CURL_OPTIONS} "https://api.github.com/repos/jxxghp/MoviePilot-Frontend/releases/latest" | jq -r .tag_name)
